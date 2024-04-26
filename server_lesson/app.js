@@ -105,7 +105,7 @@ app.use((req,res,next) =>{
 app.get('/about', (req, res) => {
     // res.send('<p>About Page</p>');
     // res.sendFile('./views/about.html', { root: __dirname });
-    res.render('about', { title: 'About' });
+    res.render('blogs/about', { title: 'About' });
 });
 
 // redirects
@@ -115,7 +115,7 @@ app.get('/about-me', (req, res) => {
 });
 
 // blog routes
-app.use( blogRoutes);
+app.use('/blogs', blogRoutes);
 // 404 page
 app.use((req, res) => {
     // res.status(404).sendFile('./views/404.html', { root: __dirname });
